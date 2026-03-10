@@ -20,9 +20,13 @@
 </nav>
 
 <div class="max-w-6xl mx-auto mt-10 px-4 text-center">
-  <h1 class="text-4xl font-bold mb-4 text-red-500">ANGULAR</h1>
+  <h1 class="text-4xl font-bold mb-4 text-red-500">Xin chào ANGULAR</h1>
+  <h1 class="text-2xl font-bold mb-4 text-green-500">Tôi đang học ANGULAR Framework</h1>
+
   <h1>Họ tên: {{fullName }} </h1>
   <h2>Tuổi: {{age}}</h2>
-  <button (click) = "sayHello()">Say Hello</button>
+  <button (click)="sayHello()">Say Hello</button> 
+  <br> <br>
+  <button class="bg-violet-500 text-white px-4 py-2 rounded" (click)="handleClick()">Click Me</button>
   <router-outlet></router-outlet>
 </div>

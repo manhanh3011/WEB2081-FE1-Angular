@@ -13,6 +13,7 @@ export class App {
   fullName = "Tran Manh Anh";
   age = 20;
   sayHello(){
-    console.log("Hello word");    
+    console.log("Hello word"); 
+    alert("Xin chào " + this.fullName)   
   }
 }

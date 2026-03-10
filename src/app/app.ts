@@ -7,6 +7,12 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
+
 export class App {
   title = 'my-app';
+  fullName = "Tran Manh Anh";
+  age = 20;
+  sayHello(){
+    console.log("Hello word");    
+  }
 }

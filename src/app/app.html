@@ -7,7 +7,7 @@
     </a>
 
     <div class="hidden md:flex items-center space-x-8">
-      <a [routerLink]="['/']" class="hover:text-gray-200">Home</a>
+      <a [routerLink]="['/']" routerLinkActive="active" class="hover:text-gray-200">Home</a>
       <a [routerLink]="['/about']" class="hover:text-gray-200">About</a>
       <a [routerLink]="['/contact']" class="hover:text-gray-200">Contact</a>
     </div>
@@ -20,13 +20,13 @@
 </nav>
 
 <div class="max-w-6xl mx-auto mt-10 px-4 text-center">
-  <h1 class="text-4xl font-bold mb-4 text-red-500">Xin chào ANGULAR</h1>
+  <!-- <h1 class="text-4xl font-bold mb-4 text-red-500">Xin chào ANGULAR</h1>
   <h1 class="text-2xl font-bold mb-4 text-green-500">Tôi đang học ANGULAR Framework</h1>
 
   <h1>Họ tên: {{fullName }} </h1>
   <h2>Tuổi: {{age}}</h2>
   <button (click)="sayHello()">Say Hello</button> 
   <br> <br>
-  <button class="bg-blue-600 text-white px-4 py-2 rounded" (click)="handleClick()">Click Me</button>
+  <button class="bg-blue-600 text-white px-4 py-2 rounded" (click)="handleClick()">Click Me</button> -->
   <router-outlet></router-outlet>
 </div>

@@ -57,4 +57,7 @@ export class Stories {
       image: 'https://kenh14cdn.com/2016/1-1471532392849.jpg'
     }
   ];
+  handleClick(index: number){
+    alert("Truyện số " + index)
+  }
 }

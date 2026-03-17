@@ -1,0 +1,33 @@
+<h2 class="text-3xl font-bold"> Thêm sản phẩm</h2>
+
+<form class="form-add" [formGroup]="addFormProduct" (ngSubmit)="submitForm()" >
+
+  <div class="form-group">
+    <label>Tên sản phẩm</label>
+    <input type="text" formControlName="name" placeholder="Nhập tên..." />
+    @if (name?.invalid && name?.touched) {
+        <p class="text-red-500">Tên sản phẩm không được để trống</p>
+    }
+  </div>
+
+  <div class="form-group">
+    <label>Giá</label>
+    <input type="number" formControlName="price" placeholder="Nhập giá..." />
+    @if(price?.invalid && price?.touched){
+        <p class="text-red-500">Giá phải lớn hơn 0</p>
+    }
+  </div>
+
+  <div class="form-group">
+    <label>Danh mục</label>
+    <select formControlName="category">
+      <option value="">-- Chọn danh mục --</option>
+      <option value="laptop">Laptop</option>
+      <option value="phone">Phone</option>
+      <option value="tablet">Tablet</option>
+    </select>
+  </div>
+
+  <button type="submit" [disabled]="addFormProduct.invalid" >Thêm mới</button>
+
+</form>

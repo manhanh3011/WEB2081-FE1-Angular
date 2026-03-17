@@ -6,6 +6,8 @@ import { Products } from './pages/products/products';
 import { ProductDetails } from './pages/products/product-details/product-details';
 import { Stories } from './pages/stories/stories';
 import { AddStory } from './pages/add-story/add-story';
+import { AddProduct } from './pages/add-product/add-product';
+import { Register } from './pages/register/register';
 
 export const routes: Routes = [
     {path: '', component: Home},
@@ -14,5 +16,8 @@ export const routes: Routes = [
     {path: 'products', component: Products},
     {path: 'products/:slug', component: ProductDetails},
     {path: 'stories', component: Stories},
-    {path: 'add-story', component: AddStory}
+    {path: 'add-story', component: AddStory},
+    {path: 'add-product', component: AddProduct},
+    {path: 'register', component: Register},
+
 ];

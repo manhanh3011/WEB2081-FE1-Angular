@@ -28,6 +28,11 @@
     </select>
   </div>
 
-  <button type="submit" [disabled]="addFormProduct.invalid" >Thêm mới</button>
+  <button type="submit" [disabled]="addFormProduct.invalid || loading" >{{loading ? "Đang gửi ..." : "Thêm sản phẩm"}} </button>
 
 </form>
+@if(success){
+  <p class="text-green-600">{{success}} </p>
+}@if (error) {
+  <p class="text-red-600">{{error}} </p>
+}

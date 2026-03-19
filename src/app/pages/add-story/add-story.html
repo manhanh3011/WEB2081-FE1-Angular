@@ -3,14 +3,24 @@
     <div>
         <label >Tên truyện</label>
         <input class="border" type="text" formControlName="title" placeholder="nhập tên truyện">
+        @if (title?.invalid && title?.touched) {
+            <p class="text-red-500">Tên truyện là bắt buộc</p>
+        }
     </div>
     <div>
         <label >Tác giả</label>
         <input class="border" type="text" formControlName="author" placeholder="nhập tên tác giả">
+        
     </div>
     <div>
         <label >Lượt xem</label>
         <input class="border" type="text" formControlName="views" placeholder="nhập lượt xem">
     </div>
-    <button class="mt-3 p-2" type="submit">Thêm truyện</button>
+    <button class="mt-3 p-2" type="submit" [disabled]="loading || addForm.invalid" >{{loading ? "Đang gửi ..." : "Thêm truyện" }} </button>
 </form>
+
+@if (success) {
+    <p style="color: green;">{{success}} </p>
+}@if (error) {
+    <p style="color: red;">{{error}} </p>
+}

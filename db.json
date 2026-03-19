@@ -1,0 +1,41 @@
+{
+  "stories": [
+    {
+      "title": "naruto",
+      "id": "1"
+    },
+    {
+      "id": "edb0",
+      "title": "doreamon",
+      "author": "fuji",
+      "views": "100"
+    },
+    {
+      "id": "f7f4",
+      "title": "truyện 1",
+      "author": "tác giả 1",
+      "views": "2000"
+    },
+    {
+      "id": "d165",
+      "title": "truyện vừa thêm",
+      "author": "tác giả 2",
+      "views": "500"
+    }
+  ],
+  "products": [
+    {
+      "id": "ee7e",
+      "name": "iphone 17 promax",
+      "price": 35000000,
+      "category": "phone"
+    },
+    {
+      "id": "5b88",
+      "name": "sản phẩm 2",
+      "price": 100,
+      "category": "laptop"
+    }
+  ],
+  "users": []
+}

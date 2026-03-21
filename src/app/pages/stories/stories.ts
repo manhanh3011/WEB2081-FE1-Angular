@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Story } from '../../interface/Story';
 
 @Component({
   selector: 'app-stories',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './stories.css',
 })
 export class Stories {
-  stories: any[] = [];
+  stories: Story[] = [];
 
   success = "";
   error = "";
@@ -16,8 +17,8 @@ export class Stories {
   constructor(private http: HttpClient){}
 
   ngOnInit(){
-    this.http.get('http://localhost:3000/stories').subscribe({
-      next: (data: any) => {
+    this.http.get<Story[]>('http://localhost:3000/stories').subscribe({
+      next: (data: Story[]) => {
         this.stories = data;
       },
       error: () => {
@@ -26,7 +27,7 @@ export class Stories {
     })
   }
 
-  deleteStory(id: number){
+  deleteStory(id: any){
     this.success = "";
     this.error = "";
     const confirmDelete = confirm("Bạn có chắc chắn muốn xoá không?");

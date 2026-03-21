@@ -1,6 +1,36 @@
-<p>Danh sách sản phẩm</p>
-<ul>
-    <li><a [routerLink]="['/products/:slug']">Laptop</a></li>
-    <li><a [routerLink]="['/products/:slug']">Phone</a></li>
-    <li><a [routerLink]="['/products/:slug']">Tablet</a></li>   
-</ul>
+<h1>Danh sách sản phẩm</h1>
+
+@if (products.length === 0) {
+    <p>Không có sản phẩm nào</p>
+}@if (products.length > 0) {
+    
+    <table class="story-table">
+        <thead>
+            <tr>
+            <th>STT</th>
+            <th>Hình ảnh</th>
+            <th>Tên sản phẩm</th>
+            <th>Gía</th>
+            <th>Danh mục</th>
+            <th>Hành động</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @for (product of products; track product.id; let i = $index) {
+                <tr>
+                    <td>{{i + 1}} </td>
+                    <td><img src="https://via.placeholder.com/60x80" /></td>
+                    <td>{{product.name}} </td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.category}} </td>
+                    <td>
+                        <button class="btn edit">Sửa</button>
+                        <button class="btn delete" (click)="deleteProduct(product.id)" >Xoá</button>
+                    </td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+}   

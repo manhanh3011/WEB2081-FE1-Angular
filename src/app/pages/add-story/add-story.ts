@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Story } from '../../services/story';
+import {  StorySevice } from '../../services/story';
 
 @Component({
   selector: 'app-add-story',
@@ -19,7 +19,7 @@ export class AddStory {
   constructor(
       private fb: FormBuilder,
       private http: HttpClient,
-      private storyService: Story,
+      private storyService: StorySevice,
     ){
     this.addForm = this.fb.group({
       title: ["", Validators.required],

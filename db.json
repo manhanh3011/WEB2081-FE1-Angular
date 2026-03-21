@@ -25,12 +25,6 @@
       "name": "iphone 17 promax",
       "price": 35000000,
       "category": "phone"
-    },
-    {
-      "id": "5b88",
-      "name": "sản phẩm 2",
-      "price": 100,
-      "category": "laptop"
     }
   ],
   "users": []

@@ -1,10 +1,6 @@
 {
   "stories": [
     {
-      "title": "naruto",
-      "id": "1"
-    },
-    {
       "id": "edb0",
       "title": "doreamon",
       "author": "fuji",
@@ -17,10 +13,10 @@
       "views": "2000"
     },
     {
-      "id": "d165",
-      "title": "truyện vừa thêm",
-      "author": "tác giả 2",
-      "views": "500"
+      "id": "0c9c",
+      "title": "Truyện mới thêm",
+      "author": "tác giả 3",
+      "views": "900000"
     }
   ],
   "products": [

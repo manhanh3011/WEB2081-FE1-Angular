@@ -13,3 +13,4 @@ export class Story {
       return this.http.post(this.api, data)
     }
 }
+ 

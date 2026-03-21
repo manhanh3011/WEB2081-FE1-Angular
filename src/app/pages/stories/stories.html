@@ -10,21 +10,22 @@
                     <th>Tên truyện</th>
                     <th>Tác giả</th>
                     <th>Lượt xem</th>
-                    <th>Năm phát hành</th>
-                    <th>Thể loại</th>
+                    <!-- <th>Năm phát hành</th>
+                    <th>Thể loại</th> -->
                     <th>Nổi bật</th>
+                    <th>Hành động</th>
 
                 </thead>
                 <tbody>
-                    @for (story of stories; track story.title; let i = $index) {
+                    @for (story of stories; track story.id; let i = $index) {
                         <tr>
-                            <td (click)="handleClick($index + 1)">{{$index + 1}} </td>
+                            <td >{{$index + 1}} </td>
                             <td><img [src]="story.image" [alt]="story.title" width="80" height="100"> </td>
                             <td>{{story.title}} </td>
                             <td>{{story.author}} </td>
                             <td>{{story.views}} </td>
-                            <td>{{story.year}} </td>
-                            <td>{{story.genre}} </td>
+                            <!-- <td>{{story.year}} </td>
+                            <td>{{story.genre}} </td> -->
                             <td>
                                 @if (story.views > 90000) {
                                     <p>🔥Truyện nổi bật</p>
@@ -32,7 +33,9 @@
                                     <p>Không</p>
                                 }
                             </td>
-
+                            <td>
+                                <button (click)="deleteStory(story.id)" >Xoá</button>
+                            </td>
                         </tr>
                     }
                 </tbody>

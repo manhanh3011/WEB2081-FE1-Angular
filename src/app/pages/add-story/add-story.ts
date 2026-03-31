@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import {  StorySevice } from '../../services/story';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-story',
@@ -20,11 +21,13 @@ export class AddStory {
       private fb: FormBuilder,
       private http: HttpClient,
       private storyService: StorySevice,
+      private router: Router,
     ){
     this.addForm = this.fb.group({
-      title: ["", Validators.required],
-      author: "",
-      views: "",       
+      title: ["", [Validators.required, Validators.minLength(6)]],
+      author: ["", [Validators.required, Validators.minLength(6)]],
+      views: ["", [Validators.required, Validators.min(0)]],   
+      image: "",
     })
   }
 
@@ -40,6 +43,7 @@ export class AddStory {
         this.loading = false;
         this.success = "Thêm truyện thành công";
         this.addForm.reset();
+        this.router.navigate(['/stories'])
       },
       error: () => {
         this.loading = false;
@@ -50,5 +54,13 @@ export class AddStory {
 
   get title(){
     return this.addForm.get("title");
+  }
+
+  get author(){
+    return this.addForm.get("author");
+  }
+
+  get views(){
+    return this.addForm.get("views");
   }
 }

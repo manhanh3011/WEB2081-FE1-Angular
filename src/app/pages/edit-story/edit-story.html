@@ -1,9 +1,9 @@
-<h1 class="text-3xl font-bold">Thêm truyện tranh</h1>
-<form class="mt-5" [formGroup]="addForm" (ngSubmit)="submitForm()" >
+<h1 class="text-3xl font-bold">Cập nhật truyện tranh</h1>
+<form class="mt-5" [formGroup]="editForm" (ngSubmit)="submitForm()" >
     <div>
         <label >Tên truyện</label>
         <input class="border" type="text" formControlName="title" placeholder="nhập tên truyện">
-        @if (title?.invalid && title?.touched) {
+         @if (title?.invalid && title?.touched) {
             <p class="text-red-500">
                 @if (title?.errors?.["required"]) {
                     Tên truyện là bắt buộc
@@ -31,7 +31,7 @@
     <div>
         <label >Lượt xem</label>
         <input class="border" type="text" formControlName="views" placeholder="nhập lượt xem">
-        @if (views?.invalid && views?.touched) {
+         @if (views?.invalid && views?.touched) {
             <p class="text-red-500">
                 @if (views?.errors?.["required"]) {
                     Views là bắt buộc
@@ -46,11 +46,6 @@
         <label >Hình ảnh</label>
         <input class="border" type="text" formControlName="image" placeholder="nhập đường dẫn">
     </div>
-    <button class="mt-3 p-2" type="submit" [disabled]="loading || addForm.invalid" >{{loading ? "Đang gửi ..." : "Thêm truyện" }} </button>
+    <button class="mt-3 p-2" type="submit" [disabled]="editForm.invalid" >Cập nhật </button>
 </form>
 
-@if (success) {
-    <p style="color: green;">{{success}} </p>
-}@if (error) {
-    <p style="color: red;">{{error}} </p>
-}

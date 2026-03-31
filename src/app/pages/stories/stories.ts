@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Story } from '../../interface/Story';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-stories',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './stories.html',
   styleUrl: './stories.css',
 })

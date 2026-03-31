@@ -35,9 +35,15 @@
                             </td>
                             <td>
                                 <button (click)="deleteStory(story.id)" >Xoá</button>
+                                <a class="p-2 text-white bg-green-600 rounded-10" [routerLink]="['/edit', story.id]">Sửa </a>
                             </td>
                         </tr>
                     }
                 </tbody>
             </table>
+            @if (success) {
+                <p style="color: green;">{{success}} </p>
+            }@if (error) {
+                <p style="color: red;">{{error}} </p>
+            }
 }

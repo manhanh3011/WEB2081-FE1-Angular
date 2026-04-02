@@ -22,10 +22,29 @@
     <label>Password</label>
     <input type="password" formControlName="password" placeholder="Nhập password..." />
     @if (password?.invalid && password?.touched) {
-        <p class="text-red-500">Mật khẩu không được để trống</p>
+      <p class="text-red-500">
+        @if(password?.errors?.['required']){
+          Mật khẩu không được để trống
+        }
+        @if(password?.errors?.['minlength']){
+          Mật khẩu tối thiểu 6 kí tự
+        }
+      </p>
     }
   </div>
 
+  <div class="form-group">
+    <label>ConfirmPassword</label>
+    <input type="password" formControlName="rePassword" placeholder="Nhập lại mật khẩu..." />
+     @if (registerForm.get('rePassword')?.touched) {     
+      @if (registerForm.get('rePassword')?.errors?.['required']) {
+        <p class="text-red-500">Không được để trống</p>
+      }
+      @if (registerForm.errors?.['notMatch']) {
+        <p class="text-red-500">Mật khẩu không khớp</p>
+      }
+    }
+  </div>
 
   <button type="submit" [disabled]="registerForm.invalid" >Đăng ký</button>
 

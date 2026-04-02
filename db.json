@@ -35,5 +35,20 @@
       "category": "phone"
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$JFtXULmMh2GdXgNTNoKWeeSgQoiin0tIO.GHMeyPdxEhajwQQ0Qhq",
+      "username": "admin",
+      "rePassword": "admin@gmail.com",
+      "id": 1
+    },
+    {
+      "email": "user@gmail.com",
+      "password": "$2a$10$JKamQPxyGbLTbOvNZDPoHeysN7nWMmQDwIxhIrVTC53KfVgKJsPtS",
+      "username": "user",
+      "rePassword": "user@gmail.com",
+      "id": 2
+    }
+  ]
 }

@@ -14,7 +14,14 @@
     <label>Email</label>
     <input type="email" formControlName="email" placeholder="Nhập email..." />
     @if (email?.invalid && email?.touched) {
-        <p class="text-red-500">Email không được để trống</p>
+      <p class="text-red-500">
+        @if(email?.errors?.['required']){
+          Email không được để trống
+        }
+        @if(email?.errors?.['email']){
+          Email không đúng định dạng
+        }
+      </p>
     }
   </div>
 

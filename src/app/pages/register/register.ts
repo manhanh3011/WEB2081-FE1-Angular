@@ -19,7 +19,7 @@ export class Register {
   ){
     this.registerForm = this.fb.group({
       username: ['', [Validators.required]],
-      email: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       rePassword: ['', [Validators.required, Validators.minLength(6)]],
     }, {validators: this.matchPassword})
@@ -29,7 +29,6 @@ export class Register {
     this.http.post(`http://localhost:3000/register`, this.registerForm.value).subscribe({
       next: (res: any) => {
         alert("Đăng ký thành công");
-        localStorage.setItem('token', res.accessToken)
         this.registerForm.reset();
         this.router.navigate(['/login']);
       },

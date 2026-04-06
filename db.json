@@ -25,6 +25,27 @@
       "author": "Fujiko F. Fujio",
       "views": "5000",
       "image": "https://upload.wikimedia.org/wikipedia/vi/b/b7/Doraemon1.jpg"
+    },
+    {
+      "title": "doreamon",
+      "author": "fuji ku",
+      "views": "100",
+      "image": "",
+      "id": "BQMZOIq"
+    },
+    {
+      "title": "truyện vừa thêm",
+      "author": "tác giả 1",
+      "views": "100",
+      "image": "image.jpgg",
+      "id": "TsWDdJg"
+    },
+    {
+      "title": "123456",
+      "author": "123456",
+      "views": "123",
+      "image": "123",
+      "id": "Jl5sU_q"
     }
   ],
   "products": [
@@ -49,6 +70,13 @@
       "username": "user",
       "rePassword": "user@gmail.com",
       "id": 2
+    },
+    {
+      "email": "manhanh3011@gmail.com",
+      "password": "$2a$10$2YxK9Zocnkp0xE6/GEFAgOj9pRRYufQstCQW7WDB5CCLhqQ52LtHG",
+      "username": "manhanh",
+      "rePassword": "manhanh3011@gmail.com",
+      "id": 3
     }
   ]
 }

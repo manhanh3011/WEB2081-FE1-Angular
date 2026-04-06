@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLinkWithHref, RouterLinkActive } from '@angular/router';
+import { RouterOutlet, RouterLinkWithHref, RouterLinkActive, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -19,5 +19,22 @@ export class App {
 
   handleClick(){
     alert("Bạn vừa click vào Button")
+  }
+
+  user: any = null;
+
+  constructor(private router: Router){}
+
+  ngOnInit() {
+    const data = localStorage.getItem('user');
+    if (data) {
+      this.user = JSON.parse(data);
+    }
+  }
+
+  logout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    this.router.navigate(['/login']);
   }
 }
